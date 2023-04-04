@@ -1,0 +1,58 @@
+@use '../../../theme.scss' as theme;
+
+$primary-200: map-get(map-get(theme.$construction-theme, primary), 200);
+
+
+:host {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); //repeat(10, 1fr);
+    column-gap: 12px;
+    // grid-template-rows: repeat(1, minmax(100px, auto));
+    align-items: center;
+
+    grid-template-areas:
+        "slogan hours"
+        "copyright copyright";
+    // grid-template-rows: auto minmax(60px, auto);
+}
+
+.hours-title {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.copyright {
+    width: 100%;
+}
+
+.copyright {
+    grid-area: copyright;
+}
+
+.slogan,
+.hours-table {
+    margin: 1rem auto;
+    width: 18rem;
+}
+
+.phone-link {
+    color: $primary-200;
+    text-decoration: unset;
+    white-space: nowrap;
+}
+
+@media (max-width: 400px) {
+    :host {
+        grid-template-columns: 1fr;
+        row-gap: 12px;
+
+        grid-template-areas:
+            "slogan"
+            "hours"
+            "copyright";
+    }
+}
+
+.copyright>* {
+    margin: auto 0;
+}

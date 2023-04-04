@@ -1,0 +1,31 @@
+.nav-list {
+
+    padding: unset;
+    text-align: center;
+
+    &--item {
+        list-style-type: none;
+    }
+
+}
+
+a.active-link {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media (max-width: 400px) {
+    .nav-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        &--item {
+            margin: 1rem 1.5rem;
+
+            &>a {
+                margin-bottom: unset;
+            }
+        }
+    }
+}

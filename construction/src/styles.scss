@@ -1,0 +1,105 @@
+@use '@angular/material' as mat;
+@use './theme.scss' as theme;
+
+$primary-900: map-get(map-get(theme.$construction-theme, primary), 900);
+$primary-100: map-get(map-get(theme.$construction-theme, primary), 100);
+$accent-50: map-get(map-get(theme.$construction-theme, accent), 50);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: $accent-50;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 8.5rem 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-gap: 12px;
+    grid-template-areas:
+        "header header"
+        "nav content"
+        "footer footer";
+    min-height: 100vh;
+}
+
+app-header {
+    color: $primary-900;
+    font-size: 14px;
+    grid-area: header;
+    text-align: center;
+    background-color: $accent-50;
+    padding: 1rem 2rem;
+}
+
+main,
+app-nav,
+app-aside {
+    padding: 1rem;
+}
+
+app-nav {
+    grid-area: nav;
+    margin-left: 0.6rem;
+}
+
+main {
+    grid-area: content;
+    // background-color: #F4CE46;
+    background-color: $accent-50;
+}
+
+app-footer {
+    grid-area: footer;
+    background-color: $accent-50;
+    color: $primary-900;
+    text-align: center;
+    padding: 25px 0;
+}
+
+// ul li {
+//     color: $primary-900;
+// }
+
+ul li a {
+    color: $primary-900;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 400px) {
+    app-nav {
+        border-right: $primary-900 1px solid;
+    }
+}
+
+@media (max-width: 400px) {
+
+    app-nav,
+    app-aside {
+        margin: 0;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "nav"
+            "content"
+            "side"
+            "footer";
+        grid-template-rows: auto minmax(60px, auto) 1fr minmax(70px, auto) auto;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

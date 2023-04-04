@@ -1,0 +1,43 @@
+:host {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); //repeat(10, 1fr);
+    column-gap: 12px;
+    // grid-template-rows: repeat(1, minmax(100px, auto));
+    align-items: center;
+}
+
+.logo {
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 1;
+    justify-self: left;
+    // grid-row-start: 1;
+    // grid-row-end: 1;
+}
+
+.call_to_action {
+    width: 100%;
+    grid-column-start: 3;
+    grid-column-end: 3;
+    // grid-row-start: 1;
+    // grid-row-end: 1;
+    justify-self: right;
+    // padding-right: 2rem;
+
+    &-button {
+        width: 100%;
+        min-height: 3rem;
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 400px) {
+    .logo {
+        grid-column-end: 4;
+    }
+
+    .call_to_action {
+        display: None;
+    }
+}
