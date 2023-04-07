@@ -17,6 +17,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ServicesComponent } from './pages/services/services.component';
 
 import { NgImageSliderModule } from 'ng-image-slider';
+import { TestimonialsComponent } from './pages/testimonials/testimonials.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { NgImageSliderModule } from 'ng-image-slider';
     FooterComponent,
     AboutUsComponent,
     ProjectsComponent,
-    ServicesComponent
+    ServicesComponent,
+    TestimonialsComponent
   ],
   imports: [
     HttpClientModule,

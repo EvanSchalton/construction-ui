@@ -32,6 +32,7 @@ $primary-200: map-get(map-get(theme.$construction-theme, primary), 200);
 .slogan,
 .hours-table {
     margin: 1rem auto;
+    max-width: 18rem;
 }
 
 .phone-link {

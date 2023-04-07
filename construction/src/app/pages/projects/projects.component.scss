@@ -14,16 +14,22 @@ $accent-100: map-get(map-get(theme.$construction-theme, accent), 100);
 }
 
 .project {
-    width: 40%;
+    width: 100%;
 
-    padding: 0.5rem 0.5rem 1rem 0.5rem;
+    padding: 0.75rem 0.75rem 1rem 0.75rem;
     margin-bottom: 1rem;
 
     background-color: $accent-100;
 }
 
-@media (max-width: 425px) {
+@media (min-width: 950px) {
     .project {
-        width: 100%;
+        width: 45%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .project {
+        width: 30%;
     }
 }

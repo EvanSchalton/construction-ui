@@ -2,6 +2,16 @@ import { Component } from '@angular/core';
 
 const SERVICES = [
   {
+    title: "Exterior Painting",
+    description: "Boost your home's curb appeal and protect it from the elements with our expert exterior painting services. Our team carefully prepares surfaces, selects high-quality paints, and employs precise application techniques to deliver a durable, visually striking finish that complements your property's style.",
+    image: "../../../assets/images/front-view.webp"
+  },
+  {
+    title: "Interior Painting",
+    description: "Transform your home's atmosphere with our professional interior painting services. From selecting the perfect color palette to meticulous preparation and flawless application, our experienced painters breathe new life into your living spaces, ensuring a stunning and long-lasting finish.",
+    image: "../../../assets/images/front-view.webp"
+  },
+  {
     title: "Plastering / Stucco",
     description: "Our skilled team specializes in both plastering and stucco applications, providing a durable and visually appealing finish to your walls and ceilings. From repairing existing surfaces to creating brand new installations, we ensure a flawless, long-lasting result that enhances the beauty of your home.",
     image: "../../../assets/images/front-view.webp"
