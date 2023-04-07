@@ -1,0 +1,29 @@
+@use '@angular/material' as mat;
+@use '../../../theme.scss' as theme;
+
+$primary-100: map-get(map-get(theme.$construction-theme, primary), 100);
+$accent-100: map-get(map-get(theme.$construction-theme, accent), 100);
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.project {
+    width: 40%;
+
+    padding: 0.5rem 0.5rem 1rem 0.5rem;
+    margin-bottom: 1rem;
+
+    background-color: $accent-100;
+}
+
+@media (max-width: 425px) {
+    .project {
+        width: 100%;
+    }
+}

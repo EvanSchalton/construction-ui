@@ -1,0 +1,47 @@
+.service {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    grid-template-rows: auto 1fr;
+    grid-gap: 12px;
+    grid-template-areas:
+        "title title"
+        "description picture";
+
+    &.flip {
+        grid-template-columns: 1fr 40%;
+        grid-template-areas:
+            "title title"
+            "picture description";
+    }
+
+    &-description {
+        grid-area: description;
+        text-align: center;
+        margin: auto;
+    }
+
+    &-title {
+        grid-area: title;
+    }
+
+    &-photo {
+        grid-area: picture;
+        width: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .service,
+    .service.flip {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "title"
+            "picture"
+            "description";
+    }
+
+    .service-title {
+        text-align: center;
+    }
+}

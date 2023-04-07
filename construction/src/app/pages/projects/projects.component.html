@@ -1,0 +1,14 @@
+<h1 class="page-header">Projects</h1>
+
+<div class="projects">
+    <div class="project" *ngFor="let project of projects">
+        <h1 class="project-title">
+            {{project.title}}
+        </h1>
+        <p class="project-description">
+            {{project.description}}
+        </p>
+        <ng-image-slider class="project-images" [images]="project.pictures" [infinite]=infinite [autoSlide]=autoSlide>
+        </ng-image-slider>
+    </div>
+</div>

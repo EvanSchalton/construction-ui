@@ -6,7 +6,7 @@ $primary-200: map-get(map-get(theme.$construction-theme, primary), 200);
 :host {
     display: grid;
     grid-template-columns: repeat(2, 1fr); //repeat(10, 1fr);
-    column-gap: 12px;
+    column-gap: 0.75rem;
     // grid-template-rows: repeat(1, minmax(100px, auto));
     align-items: center;
 
@@ -32,7 +32,6 @@ $primary-200: map-get(map-get(theme.$construction-theme, primary), 200);
 .slogan,
 .hours-table {
     margin: 1rem auto;
-    width: 18rem;
 }
 
 .phone-link {
@@ -41,10 +40,10 @@ $primary-200: map-get(map-get(theme.$construction-theme, primary), 200);
     white-space: nowrap;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
     :host {
         grid-template-columns: 1fr;
-        row-gap: 12px;
+        row-gap: 0.75rem;
 
         grid-template-areas:
             "slogan"

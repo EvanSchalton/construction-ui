@@ -1,3 +1,52 @@
-.about-us--photo {
+@use '@angular/material' as mat;
+@use '../../../theme.scss' as theme;
+
+$primary-100: map-get(map-get(theme.$construction-theme, primary), 100);
+$accent-100: map-get(map-get(theme.$construction-theme, accent), 100);
+
+.about_us--photo {
     width: 100%;
+}
+
+.about_us {
+    &-profile_cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    &-profile_card {
+        min-width: 10rem;
+        width: 20%;
+
+        padding: 0.5rem 0.5rem 1rem 0.5rem;
+        margin-bottom: 1rem;
+
+        background-color: $accent-100;
+
+        &--picture {
+            width: -webkit-fill-available;
+
+            &---wrapper {
+                width: -webkit-fill-available;
+            }
+        }
+
+        &--details {
+
+            &---name {
+                margin: 0.5rem 0;
+                text-align: center;
+            }
+
+            &---title {
+                text-align: center;
+                margin: 0;
+            }
+
+        }
+    }
 }

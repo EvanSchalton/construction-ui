@@ -1,0 +1,9 @@
+<h1 class="page-header">Services</h1>
+
+<div class="service" *ngFor="let service of services; let index = index" [ngClass]="{'flip': 0 === index % 2}">
+    <h2 class="service-title">{{service.title}}</h2>
+    <!-- <div class="service-details"> -->
+    <p class="service-description">{{service.description}}</p>
+    <img src="{{service.image}}" class="service-photo" alt="{{service.title}}">
+    <!-- </div> -->
+</div>

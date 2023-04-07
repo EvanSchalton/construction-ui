@@ -5,8 +5,25 @@ $primary-900: map-get(map-get(theme.$construction-theme, primary), 900);
 $primary-100: map-get(map-get(theme.$construction-theme, primary), 100);
 $accent-50: map-get(map-get(theme.$construction-theme, accent), 50);
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+
+// html,
+// body {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+// }
+
 body {
     margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
     padding: 0;
     font-family: sans-serif;
     background-color: $accent-50;
@@ -36,7 +53,7 @@ app-header {
 main,
 app-nav,
 app-aside {
-    padding: 1rem;
+    padding: 0 1rem;
 }
 
 app-nav {
@@ -55,7 +72,7 @@ app-footer {
     background-color: $accent-50;
     color: $primary-900;
     text-align: center;
-    padding: 25px 0;
+    padding: 2rem 1rem;
 }
 
 // ul li {
@@ -69,13 +86,17 @@ ul li a {
     margin-bottom: 15px;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 425px) {
     app-nav {
         border-right: $primary-900 1px solid;
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 425px) {
+
+    .page-header {
+        text-align: center;
+    }
 
     app-nav,
     app-aside {
@@ -88,18 +109,7 @@ ul li a {
             "header"
             "nav"
             "content"
-            "side"
             "footer";
-        grid-template-rows: auto minmax(60px, auto) 1fr minmax(70px, auto) auto;
+        grid-template-rows: auto minmax(60px, auto) 1fr auto;
     }
-}
-
-html,
-body {
-    height: 100%;
-}
-
-body {
-    margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
 }
