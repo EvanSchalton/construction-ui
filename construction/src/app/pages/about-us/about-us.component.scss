@@ -10,6 +10,10 @@ $accent-100: map-get(map-get(theme.$construction-theme, accent), 100);
 
 .about_us {
     &-profile_cards {
+        &--wrapper {
+            display: block;
+        }
+
         display: flex;
         flex-wrap: wrap;
         align-content: center;
@@ -28,10 +32,10 @@ $accent-100: map-get(map-get(theme.$construction-theme, accent), 100);
         background-color: $accent-100;
 
         &--picture {
-            width: -webkit-fill-available;
+            width: 100%;
 
             &---wrapper {
-                width: -webkit-fill-available;
+                width: 100%;
             }
         }
 

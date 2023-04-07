@@ -31,15 +31,17 @@
     </p>
 </div>
 
-<div class="about_us-profile_cards">
-    <div class="about_us-profile_card" *ngFor="let profile of profiles">
-        <div class="about_us-profile_card--picture---wrapper">
-            <img src="{{profile.picture_path}}" alt="{{profile.name}} / {{profile.title}} - profile picture"
-                class="about_us-profile_card--picture">
-        </div>
-        <div class="about_us-profile_card--details">
-            <h3 class="about_us-profile_card--details---name">{{profile.name}}</h3>
-            <h4 class="about_us-profile_card--details---title">{{profile.title}}</h4>
+<div class="about_us-profile_cards--wrapper">
+    <div class="about_us-profile_cards">
+        <div class="about_us-profile_card" *ngFor="let profile of profiles">
+            <div class="about_us-profile_card--picture---wrapper">
+                <img src="{{profile.picture_path}}" alt="{{profile.name}} / {{profile.title}} - profile picture"
+                    class="about_us-profile_card--picture">
+            </div>
+            <div class="about_us-profile_card--details">
+                <h3 class="about_us-profile_card--details---name">{{profile.name}}</h3>
+                <h4 class="about_us-profile_card--details---title">{{profile.title}}</h4>
+            </div>
         </div>
     </div>
 </div>
